@@ -13,8 +13,11 @@ class Triangulo:
     def area(base, altura):
         return base * altura / 2
     @staticmethod
-    def perimetro (base, altura):
+    def hipo (base, altura):
         return math.sqrt(base**2 + altura**2) 
+    @staticmethod
+    def perimetro (base, altura, hipo):
+        return  base + altura + hipo
         
 option = 0
 
@@ -54,8 +57,9 @@ while option != 4:
     elif option == 2:
         print("Triangulo")
         print("1. Calcular area")
-        print("2. Calcular perimetro del triangulo")
-        print("3. Salir al menu principal")
+        print("2. Calcular hipotenusa del triangulo")
+        print("3. Calcular perimetro del triangulo")
+        print("4. Salir al menu principal")
         option_figura = int(input("Ingresa una opcion: "))
         if option_figura == 1:
             base = float(input("Ingresa la base: "))
@@ -67,11 +71,19 @@ while option != 4:
         elif option_figura == 2:
             base = float(input("Ingresa la base: "))
             altura = float(input("Ingresa la altura: "))
-            perimetro = Triangulo.perimetro(base, altura)
+            hipo = Triangulo.hipo(base, altura)            
+            print("La hipotenusa 2del triangulo es: ")
+            for i in range(10, -1, -1):
+                print(f"Con {i} decimales: {round(hipo, i)}")
+        elif option_figura == 3:
+            base = float(input("Ingresa la base: "))
+            altura = float(input("Ingresa la altura: "))
+            hipo = Triangulo.hipo(base, altura)
+            perimetro = Triangulo.perimetro(base, altura, hipo)
             print("El perimetro del triangulo es: ")
             for i in range(10, -1, -1):
                 print(f"Con {i} decimales: {round(perimetro, i)}")
-        elif option_figura == 3:
+        elif option_figura == 4:
             print("Regresando al menu principal")
         else:
             print("Opcion invalida")
