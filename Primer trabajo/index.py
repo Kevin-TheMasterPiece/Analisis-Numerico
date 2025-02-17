@@ -88,7 +88,29 @@ while option != 4:
         else:
             print("Opcion invalida")
     elif option == 3:
-        print("Rectangulo")
+        print("1. Calcular area")
+        print("2. Calcular perimetro ")
+        print("3. Salir al menu principal")
+        option_figura = int(input("Ingresa una opcion: "))
+        
+        if option_figura == 1:
+            base = float(input("Ingresa la base: "))
+            altura = float(input("Ingresa la altura: "))
+            area = base * altura
+            print(f"El area del rectangulo es: {area}")
+            for i in range(10, -1, -1):
+                print(f"Con {i} decimales: {round(area, i)}")
+        elif option_figura == 2:
+            base = float(input("Ingresa la base: "))
+            altura = float(input("Ingresa la altura: "))
+            perimetro = 2 * base + 2 * altura
+            print(f"El perimetro del rectangulo es: {perimetro}")
+            for i in range(10, -1, -1):
+                print(f"Con {i} decimales: {round(perimetro, i)}")
+        elif option_figura == 3:
+            print("Regresando al menu principal")
+        else:
+            print("Opcion invalida")
     elif option == 4:
         print("Adios")
     else:
