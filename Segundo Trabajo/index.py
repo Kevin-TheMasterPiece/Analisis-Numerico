@@ -53,7 +53,7 @@ while opcion != 4:
     elif opcion == 2:
         try:
             numero = int(input("Ingresa el número: "))
-            if numero <= 0 or numero >= 4000:
+            if numero <= 0 or numero >4000:
                 print("Solo se aceptan números entre 1 y 3999.")
             else:
                 print(f"El número {numero} en romano es: {numerosRomanos(numero)}")
