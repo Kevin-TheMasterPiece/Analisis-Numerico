@@ -12,7 +12,11 @@ while opcion != 4:
 
         if opcion == 1:
             numero = int(input("Ingresa el número: "))
-            print(f"El número {numero} en binario es: {bin(numero)[2:]}")
+            num_bin = []
+            while numero > 0:
+                num_bin.append(numero % 2)
+                numero = numero // 2
+            print(f"El número en binario es: {''.join(map(str, num_bin[::-1]))}")
         elif opcion == 2:
             numero = int(input("Ingresa el número: "))
             print(f"El número {numero} en octal es: {oct(numero)[2:]}")
