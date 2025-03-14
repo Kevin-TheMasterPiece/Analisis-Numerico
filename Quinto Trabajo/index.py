@@ -3,7 +3,7 @@ opcion = 0
 
 while opcion != 3:
     print("\nMenú Principal")
-    print("1. ")
+    print("1. Newton-Raphson")
     print("2. Serie de taylor")
     print("3. Salir")
 
