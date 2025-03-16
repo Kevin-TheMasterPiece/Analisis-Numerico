@@ -43,21 +43,16 @@ while opcion != 3:
 
     elif opcion == 2:
         try:
-            # Solicitar la función al usuario
             funcion_input = input("Ingrese la función con x como la variable (por ejemplo, 'sin(x)', 'exp(x)', 'log(x)', 'x**2 + 3*x + 1'): ")
-            
             # Convertir la entrada en una expresión simbólica
             x = sp.symbols('x')
             funcion = sp.sympify(funcion_input)
-            
             # Solicitar el punto x0 y el número de términos
             x0 = float(input("Ingrese el punto x0: "))
             n = int(input("Ingrese el número de términos de la serie: "))
-             
             # Calcular la serie de Taylor
             taylor = serie_taylor(funcion, x, x0, n)
             
-            # Mostrar el resultado
             print("La serie de Taylor de la función en el punto x0 es:", taylor)
             garficar_funcion_taylor(funcion, taylor, x, x0)
         
