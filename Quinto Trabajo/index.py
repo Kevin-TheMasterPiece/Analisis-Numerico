@@ -78,10 +78,11 @@ while opcion != 3:
                     break
                 x1 = x0 - fx/dfx
                 
-                print(f"Iteración {iteracion+2}: x = {round(x1, 4)}")
+                
                 if abs(x1 - x0) < tolerancia:
                     print(f"La raíz es: {round(x1, 4)}")
                     break
+                print(f"Iteración {iteracion+2}: x = {round(x1, 4)}")
                 x0 = x1
                 iteracion += 1
             else:
